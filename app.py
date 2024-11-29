@@ -10,11 +10,17 @@ OUTPUT_DIR = "assets/outputs/"
 
 # Configure Google Vision API credentials
 service_key_path = "service_account_key.json"
-with open(service_key_path, "w") as f:
-    json.dump(st.secrets["google_cloud_service_key"], f)
 
-# Set the environment variable
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = service_key_path
+# Ensure the secret exists and save it as a JSON file
+if "google_cloud_service_key" in st.secrets:
+    with open(service_key_path, "w") as f:
+        json.dump(dict(st.secrets["google_cloud_service_key"]), f)
+
+    # Set the environment variable for Google Vision API
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = service_key_path
+else:
+    st.error("Google Cloud service key is missing in the secrets configuration!")
+    st.stop()
 # Configure Streamlit app
 st.set_page_config(page_title="📝 Handwritten OCR Analyzer", layout="wide", initial_sidebar_state="expanded")
 
