@@ -2,6 +2,7 @@ import streamlit as st
 from google_vision_ocr import process_image_with_google_vision
 from text_cleaner import clean_and_format_text
 import os
+import json
 
 # Constants
 OUTPUT_DIR = "assets/outputs/"
