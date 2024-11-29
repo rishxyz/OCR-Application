@@ -105,7 +105,7 @@ Steps for Deployment:
 	-	Ensure the text is not obstructed or overly stylized.
 
 ---
-## **Future Improvements
+## **Future Improvements**
 
 -	Add support for multiple languages in OCR processing.
 -  Enhance confidence scoring using AI-based post-processing.
