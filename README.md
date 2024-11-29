@@ -62,6 +62,8 @@ The **Handwritten OCR Analyzer** is a web-based application that uses Google Vis
     auth_provider_x509_cert_url = "https://www.googleapis.com/oauth2/v1/certs"
     client_x509_cert_url = "your_client_x509_cert_url"
 
+---
+
     
 ### 2. **Run the Application Locally**
 1.  Activate your virtual environment:
