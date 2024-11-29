@@ -8,8 +8,12 @@ OUTPUT_DIR = "assets/outputs/"
 
 
 # Configure Google Vision API credentials
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = st.secrets["google_cloud_service_key"]
+service_key_path = "service_account_key.json"
+with open(service_key_path, "w") as f:
+    json.dump(st.secrets["google_cloud_service_key"], f)
 
+# Set the environment variable
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = service_key_path
 # Configure Streamlit app
 st.set_page_config(page_title="📝 Handwritten OCR Analyzer", layout="wide", initial_sidebar_state="expanded")
 
