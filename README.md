@@ -120,12 +120,6 @@ Steps for Deployment:
 This project is licensed under the MIT License.
 
 ---
-## Contact
-
-For questions or feedback, please contact:
--	Name: Rishika Chowdary
--   Email: rishikachowdary.alla@unh.edu
-- 	GitHub: rishxyz
 
 
 
